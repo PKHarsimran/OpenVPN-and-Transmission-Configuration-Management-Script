@@ -13,13 +13,11 @@ Installation
 
 To use this script, follow these steps:
 
-    Download the script to your Linux system.
-    Open the script file in a text editor and make any necessary changes to match your system's configuration (e.g., OpenVPN configuration file path).
-    Save the script file and exit the text editor.
-    Make the script executable by running the following command in the terminal: chmod +x transmission-vpn-manager.sh
-    Test the script by running the following command: ./transmission-vpn-manager.sh. The script should output the status of the OpenVPN and Transmission services, and update the Transmission configuration if necessary.
-    Add the script as a cron job to run periodically. For example, to run the script every 3 hours, run the following command: crontab -e and add the following line: 0 */3 * * * /path/to/transmission-vpn-manager.sh.
-
+     Copy the script to a directory on your machine (e.g., /opt/scripts).
+    Make the script executable with the following command: chmod +x /opt/scripts/transmission-openvpn-auto-config.sh
+    Set up a cron job to run the script periodically. For example, to run the script every three hours, add the following line to your crontab (crontab -e): 0 */3 * * * /opt/scripts/transmission-openvpn-auto-config.sh > /dev/null 2>&1
+    Check the cron log to confirm that the script is running as expected.
+ 
 License
 
 This script is licensed under the MIT License. See the LICENSE file for details.
