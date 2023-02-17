@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Log file path
-LOG_FILE="/home/pkvirus/openvpn_transmission.log"
+LOG_FILE="/home/<USER>/openvpn_transmission.log"
 
 # Check OpenVPN status
 if systemctl is-active --quiet openvpn.service ; then
